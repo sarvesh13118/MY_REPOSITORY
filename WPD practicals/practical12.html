@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Image Formatting Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: darkblue;
+      }
+      img {
+        margin: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px gray;
+      }
+      .caption {
+        font-style: italic;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Formatting Example</h1>
+
+    <h2>1. Basic Image</h2>
+    <img
+      src="https://via.placeholder.com/300"
+      alt="Placeholder Image"
+      width="300"
+      height="200"
+    />
+    <p class="caption">
+      A simple placeholder image with a fixed width and height.
+    </p>
+
+    <h2>2. Rounded Image</h2>
+    <img
+      src="https://via.placeholder.com/300"
+      alt="Placeholder Image"
+      width="300"
+      height="200"
+      style="border-radius: 50%"
+    />
+    <p class="caption">An image with rounded corners (50% border-radius).</p>
+  </body>
+</html>
