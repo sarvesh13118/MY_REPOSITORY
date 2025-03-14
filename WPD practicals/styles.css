@@ -1,0 +1,7 @@
+.external-style {
+  color: red;
+  font-size: 22px;
+  padding: 10px;
+  border: 2px dashed red;
+  display: inline-block;
+}

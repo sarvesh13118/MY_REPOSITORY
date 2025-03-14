@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>FORM FORMATTING</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin: 5px 0;
+    }
+
+    input[type="button"] {
+      margin-top: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="button"]:hover {
+      background-color: #218838;
+    }
+  </style>
+  <body>
+    <h2>HTML FORMS</h2>
+    <form>
+      <label> FIRST NAME: </label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        value="ENTER FIRST NAME"
+      /><br />
+      <label> LAST NAME: </label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        value="ENTER LAST NAME"
+      /><br />
+      <label>HTML</label>
+      <input type="radio" id="fname" name="fname" value="HTML" />
+
+      <br />
+      <label>CSS</label>
+      <input type="radio" id="t3" name="t3" value="CSS" />
+
+      <br />
+      <label>JAVASCRIPT </label>
+      <input type="radio" id="t4" name="t4" value="JAVASCRIPT" />
+
+      <br />
+      <label> I HAVE A BIKE </label>
+      <input type="checkbox" id="t5" name="t5" value="I HAVE A BIKE" />
+      <br />
+      <label> I HAVE A CAR</label>
+      <input type="checkbox" id="t6" name="t6" value="I HAVE A CAR" />
+
+      <br />
+      <label> I HAVE A BOAT</label>
+      <input type="checkbox" id="t7" name="t7" value="I HAVE A BOAT" />
+
+      <br />
+      <input type="button" id="fname" name="fname" value="SUBMIT" />
+      <br />
+    </form>
+  </body>
+</html>

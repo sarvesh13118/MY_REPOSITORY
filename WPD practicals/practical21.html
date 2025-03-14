@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>FORM FORMATTING</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      color: #555555;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    input[type="button"] {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <body>
+    <h2>Text input fields</h2>
+    <form>
+      <label> USERNAME: </label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        value="ENTER THE USERNAME"
+      /><br />
+      <label> PASSWORD: </label>
+      <input
+        type="password"
+        id="lname"
+        name="lname"
+        value="ENTER THE PASSWORD"
+      /><br />
+      <input type="button" id="b1" name="b1" value="SUBMIT" /><br />
+    </form>
+  </body>
+</html>
