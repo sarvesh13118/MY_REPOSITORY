@@ -1,5 +1,7 @@
 {
   "files.associations": {
-    "PRACTICAL9.C": "cpp"
+    "PRACTICAL9.C": "cpp",
+    "stdio.h": "c",
+    "PRACTICAL7Q2.C": "cpp"
   }
 }

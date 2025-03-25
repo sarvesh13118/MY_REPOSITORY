@@ -16,6 +16,5 @@ int main() {
     printf("Left Shift of %d by 1 position is %d\n", num1, result); 
     result = num1 >> 1;
     printf("Right Shift of %d by 1 position is %d\n", num1, result); 
-
     return 0;
 }

@@ -19,5 +19,4 @@ else
 {
     printf("The third number is the greatest number");
 }
- 
 }
