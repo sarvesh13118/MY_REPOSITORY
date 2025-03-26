@@ -1,0 +1,973 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #04f685;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #04f685;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #04f685;
+    transform: translateY(-2px);
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #04f685;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #04f685;
+}
+
+nav ul li a.active {
+    color: #04f685;
+    font-weight: bold;
+}
+
+.cart-icon {
+    position: relative;
+    padding: 5px 10px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #04f685;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/burger.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 15px 20px;
+    background-color: #04f685;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Categories Section */
+.categories {
+    padding: 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.categories h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Featured Section */
+.featured {
+    padding: 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #fff8f8;
+}
+
+.featured h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.featured-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-item img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 40px;
+    width: 50%;
+}
+
+.featured-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.featured-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #04f685
+    margin-bottom: 20px;
+}
+
+.original {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+/* Restaurants Page Styles */
+.restaurants-header {
+    padding: 60px 5% 40px;
+    text-align: center;
+    background-color: #fff8f8;
+}
+
+.restaurants-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.restaurant-filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filter-options button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-options button:hover, .filter-options button.active {
+    background-color: #04f685;
+    color: white;
+    border-color: #04f685;
+}
+
+.sort-options select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.restaurant-list {
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    padding: 20px;
+}
+
+.restaurant-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #ffc107;
+    margin-right: 10px;
+}
+
+.delivery-info {
+    display: flex;
+    margin-top: 15px;
+    color: #666;
+}
+
+.delivery-info span {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.delivery-info i {
+    margin-right: 5px;
+}
+
+/* Contact Page Styles */
+.contact-header {
+    padding: 60px 5% 40px;
+    text-align: center;
+    background-color: #fff8f8;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-content {
+    display: flex;
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    width: 40%;
+    padding-right: 40px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: #04f685;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    width: 60%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Order Page Styles */
+.order-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/burger.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 5%;
+    color: white;
+}
+
+.order-header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.restaurant-meta {
+    margin-top: 20px;
+}
+
+.restaurant-meta .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.restaurant-meta .stars {
+    color: #ffc107;
+    margin-right: 10px;
+}
+
+.restaurant-meta .delivery-info {
+    display: flex;
+    margin-top: 15px;
+}
+
+.restaurant-meta .delivery-info span {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-meta .delivery-info i {
+    margin-right: 5px;
+}
+
+.order-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+.menu-categories {
+    width: 25%;
+    padding-right: 30px;
+}
+
+.menu-categories h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.menu-categories ul {
+    list-style: none;
+    border-left: 2px solid #eee;
+}
+
+.menu-categories li {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 2px solid transparent;
+}
+
+.menu-categories li:hover {
+    color: #ff6b6b;
+}
+
+.menu-categories li.active {
+    color: #ff6b6b;
+    border-left: 2px solid #ff6b6b;
+    font-weight: bold;
+}
+
+.menu-items {
+    width: 75%;
+}
+
+.menu-items h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.menu-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #eee;
+}
+
+.item-info {
+    width: 70%;
+}
+
+.item-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.item-info .price {
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 8px;
+}
+
+.item-info .description {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.item-add {
+    width: 25%;
+    position: relative;
+}
+
+.item-add img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-add button {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 20px;
+    background-color: white;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item-add button:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    animation: fadeInOut 2s ease-in-out;
+    z-index: 1000;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; bottom: 0; }
+    20% { opacity: 1; bottom: 20px; }
+    80% { opacity: 1; bottom: 20px; }
+    100% { opacity: 0; bottom: 0; }
+}
+
+/* Cart Page Styles */
+.cart-header {
+    padding: 60px 5% 40px;
+    text-align: center;
+    background-color: #fff8f8;
+}
+
+.cart-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cart-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+.cart-items {
+    width: 60%;
+    padding-right: 40px;
+}
+
+.restaurant-info {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.restaurant-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #eee;
+}
+
+.item-details {
+    width: 70%;
+}
+
+.item-details h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.item-details .price {
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.item-image {
+    width: 25%;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-summary {
+    width: 40%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.cart-summary h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.summary-row.total {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* Bill Page Styles */
+.bill-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    display: flex;
+}
+
+.bill-success {
+    width: 40%;
+    padding-right: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #4CAF50;
+    margin-bottom: 30px;
+}
+
+.bill-success h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.bill-success p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.order-id {
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+.bill-details {
+    width: 60%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bill-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-items {
+    margin: 30px 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.bill-summary {
+    margin: 30px 0;
+}
+
+.delivery-info, .payment-info {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.delivery-info h3, .payment-info h3 {
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 60px 5% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6b6b;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6b6b;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .featured-item {
+        flex-direction: column;
+    }
+
+    .featured-item img, .featured-content {
+        width: 100%;
+    }
+
+    .restaurant-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .order-container, .cart-container, .bill-container {
+        flex-direction: column;
+    }
+    
+    .menu-categories, .menu-items, 
+    .cart-items, .cart-summary,
+    .bill-success, .bill-details {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .menu-categories {
+        margin-bottom: 40px;
+    }
+    
+    .cart-summary {
+        margin-top: 40px;
+    }
+    
+    .bill-success {
+        margin-bottom: 40px;
+        padding-right: 0;
+    }
+}
