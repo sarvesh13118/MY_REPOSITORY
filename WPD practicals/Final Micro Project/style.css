@@ -512,6 +512,9 @@ nav ul li a.active {
 
 .category-card {
   background-color: white;
+  grid-template-columns: auto;
+  width: 500px;
+  flex-wrap:wrap; /* Wraps cards if screen is small */
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow);
