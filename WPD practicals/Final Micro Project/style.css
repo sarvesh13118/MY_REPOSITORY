@@ -420,6 +420,7 @@ nav ul li a.active {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   line-height: 1.2;
   background: linear-gradient(to right, white, #e0f7fa);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 8s ease infinite;

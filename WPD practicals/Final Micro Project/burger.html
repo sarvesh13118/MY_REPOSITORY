@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodie | Burgers</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+      }
+      header {
+        background: #ff5733;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .burger-container {
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .burger-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 0;
+      }
+      .burger-item img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+      .burger-info {
+        flex: 1;
+      }
+      .burger-info h2 {
+        color: #ff5733;
+        margin: 0 0 10px;
+      }
+      .burger-info p {
+        font-size: 16px;
+        color: #555;
+        margin: 0 0 10px;
+      }
+      .burger-info .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #27ae60;
+      }
+      .order-btn {
+        display: inline-block;
+        background: #ff5733;
+        color: white;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+      .order-btn:hover {
+        background: #e04d2c;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Burgers - Foodie</header>
+    <div class="burger-container">
+      <div class="burger-item">
+        <img src="burger1.jpg" alt="Juicy Cheeseburger" />
+        <div class="burger-info">
+          <h2>Juicy Cheeseburger</h2>
+          <p>
+            Premium beef, fresh lettuce, tomato, cheese, and a special secret
+            sauce.
+          </p>
+          <span class="price">$8.99</span>
+          <a href="order.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+      <div class="burger-item">
+        <img src="burger4.jpg" alt="Spicy BBQ Burger" />
+        <div class="burger-info">
+          <h2>Spicy BBQ Burger</h2>
+          <p>
+            Grilled beef patty with smoky BBQ sauce, jalapeños, and crispy
+            onions.
+          </p>
+          <span class="price">$9.49</span>
+          <a href="order.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+      <div class="burger-item">
+        <img src="burger2.jpg" alt="Veggie Delight Burger" />
+        <div class="burger-info">
+          <h2>Veggie Delight Burger</h2>
+          <p>
+            Loaded with fresh veggies, a grilled plant-based patty, and herb
+            mayo.
+          </p>
+          <span class="price">$7.99</span>
+          <a href="order.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+      <div class="burger-item">
+        <img src="burger3.jpg" alt="Double Patty Melt" />
+        <div class="burger-info">
+          <h2>Double Patty Melt</h2>
+          <p>
+            Two juicy beef patties, melted cheese, and a toasted brioche bun.
+          </p>
+          <span class="price">$10.99</span>
+          <a href="order.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+      <div class="burger-item">
+        <img src="burger4.jpg" alt="Classic Chicken Burger" />
+        <div class="burger-info">
+          <h2>Classic Chicken Burger</h2>
+          <p>
+            Crispy fried chicken, lettuce, tomato, and tangy garlic aioli sauce.
+          </p>
+          <span class="price">$8.49</span>
+          <a href="order.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
