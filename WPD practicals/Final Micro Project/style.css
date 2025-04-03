@@ -506,21 +506,25 @@ nav ul li a.active {
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
   gap: 30px;
   perspective: 1000px;
 }
 
 .category-card {
   background-color: white;
-  grid-template-columns: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 500px;
-  flex-wrap:wrap; /* Wraps cards if screen is small */
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
-  position: relative;
+  position: relative; /* Changed from static to relative */
   transform-style: preserve-3d;
+  margin: 0 auto; /* This centers the card horizontally */
 }
 
 .category-card::before {

@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodie | Pizzas</title>
+    <title>Foodie | Beverages</title>
     <style>
       body {
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f8f1e4;
+        background-color: #f3f3f3;
       }
       .main-header {
         background: #04f685;
@@ -29,7 +29,7 @@
         padding: 0 20px;
       }
       .logo {
-        font-size: 12px;
+        font-size: 24px;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -69,7 +69,7 @@
         letter-spacing: 2px;
         margin-bottom: 30px;
       }
-      .pizza-container {
+      .beverage-container {
         max-width: 900px;
         margin: 20px auto;
         background: white;
@@ -77,31 +77,32 @@
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
       }
-      .pizza-item {
+      .beverage-item {
         display: flex;
         align-items: center;
         border-bottom: 1px solid #ddd;
         padding: 15px 0;
       }
-      .pizza-item img {
+      .beverage-item img {
         width: 150px;
         height: 150px;
         border-radius: 10px;
         margin-right: 20px;
+        object-fit: cover;
       }
-      .pizza-info {
+      .beverage-info {
         flex: 1;
       }
-      .pizza-info h2 {
+      .beverage-info h2 {
         color: #04f685;
         margin: 0 0 10px;
       }
-      .pizza-info p {
+      .beverage-info p {
         font-size: 16px;
         color: #555;
         margin: 0 0 10px;
       }
-      .pizza-info .price {
+      .beverage-info .price {
         font-size: 18px;
         font-weight: bold;
         color: #27ae60;
@@ -119,7 +120,7 @@
         transition: background 0.3s ease;
       }
       .order-btn:hover {
-        background: #04f685;
+        background: #04c96d;
       }
       footer {
         background: #333;
@@ -154,19 +155,17 @@
     <header class="main-header">
       <div class="header-container">
         <div class="logo">
-          <img src="logo2.jpg" alt="Foodie logo">
-          </div>
+          <img src="logo2.jpg" alt="Foodie logo" />
+        </div>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="burgers.html">Burgers</a></li>
             <li><a href="pizza.html">Pizza</a></li>
-            <li><a href="fastfood.html">Fast Food</a></li>
-            <li><a href="beverages.html">Beverages</a></li>
-            <li><a href="restaurants.html">Restaurants</a></li>
-            <li><a href="order.html">Order</a></li>
+            <li><a href="beverages.html" class="active">Beverages</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order</a></li>
             <li><a href="cart.html">Cart</a></li>
             <li><a href="bill.html">Bill</a></li>
           </ul>
@@ -174,61 +173,58 @@
       </div>
     </header>
 
-    <div class="page-title">Pizzas</div>
+    <div class="page-title">Beverages</div>
 
-    <div class="pizza-container">
-      <div class="pizza-item">
-        <img src="pizza1.jpg" alt="Margherita Pizza" />
-        <div class="pizza-info">
-          <h2>Margherita Pizza</h2>
-          <p>
-            Classic tomato sauce, fresh mozzarella, and basil on a crispy crust.
-          </p>
-          <span class="price">$9.99</span>
+    <div class="beverage-container">
+      <div class="beverage-item">
+        <img src="cola.jpg" alt="Classic Cola" />
+        <div class="beverage-info">
+          <h2>Classic Cola</h2>
+          <p>Refreshing cola with the perfect balance of sweetness and fizz.</p>
+          <span class="price">$2.99</span>
           <a href="order.html" class="order-btn">Order Now</a>
         </div>
       </div>
-      <div class="pizza-item">
-        <img src="pizza2.jpg" alt="Pepperoni Pizza" />
-        <div class="pizza-info">
-          <h2>Pepperoni Pizza</h2>
-          <p>
-            Loaded with spicy pepperoni, melted cheese, and rich tomato sauce.
-          </p>
-          <span class="price">$11.49</span>
+      <div class="beverage-item">
+        <img src="coffe.jpg" alt="Iced Coffee" />
+        <div class="beverage-info">
+          <h2>Iced Coffee</h2>
+          <p>Smooth cold brew coffee with milk and your choice of sweetener.</p>
+          <span class="price">$3.99</span>
           <a href="order.html" class="order-btn">Order Now</a>
         </div>
       </div>
-      <div class="pizza-item">
-        <img src="pizza3.jpg" alt="BBQ Chicken Pizza" />
-        <div class="pizza-info">
-          <h2>BBQ Chicken Pizza</h2>
+      <div class="beverage-item">
+        <img src="lemon.jpg" alt="Fresh Lemonade" />
+        <div class="beverage-info">
+          <h2>Fresh Lemonade</h2>
           <p>
-            Grilled chicken, tangy BBQ sauce, red onions, and mozzarella cheese.
+            Homemade lemonade with freshly squeezed lemons and natural
+            sweetener.
           </p>
-          <span class="price">$12.99</span>
+          <span class="price">$3.49</span>
           <a href="order.html" class="order-btn">Order Now</a>
         </div>
       </div>
-      <div class="pizza-item">
-        <img src="pizza4.jpg" alt="Veggie Supreme Pizza" />
-        <div class="pizza-info">
-          <h2>Veggie Supreme Pizza</h2>
+      <div class="beverage-item">
+        <img src="milkshake.jpg" alt="Strawberry Milkshake" />
+        <div class="beverage-info">
+          <h2>Strawberry Milkshake</h2>
           <p>
-            A mix of bell peppers, olives, mushrooms, onions, and fresh herbs.
+            Creamy milkshake made with real strawberries and vanilla ice cream.
           </p>
-          <span class="price">$10.99</span>
+          <span class="price">$4.99</span>
           <a href="order.html" class="order-btn">Order Now</a>
         </div>
       </div>
-      <div class="pizza-item">
-        <img src="pizza5.jpg" alt="Meat Lovers Pizza" />
-        <div class="pizza-info">
-          <h2>Meat Lovers Pizza</h2>
+      <div class="beverage-item">
+        <img src="water.jpg" alt="Mineral Water" />
+        <div class="beverage-info">
+          <h2>Mineral Water</h2>
           <p>
-            Packed with sausage, bacon, ham, and pepperoni for a meaty delight.
+            Natural mineral water with essential electrolytes for hydration.
           </p>
-          <span class="price">$13.99</span>
+          <span class="price">$1.99</span>
           <a href="order.html" class="order-btn">Order Now</a>
         </div>
       </div>
@@ -236,8 +232,7 @@
 
     <footer>
       <div class="footer-container">
-        <div class="logo">
-          <img src="logo2.jpg" alt="Foodie logo">
+        <div class="logo"><img src="logo2.jpg" alt="Foodie logo" />Foodie</div>
         <div class="social-links">
           <a href="facebook.html"><i class="fab fa-facebook"></i></a>
           <a href="twitter.html"><i class="fab fa-twitter"></i></a>
